@@ -35,8 +35,7 @@ def get_shop_list_by_dish(cook_book, dish, person_count):
     for ingredients in cook_book[dish]:
         ingredients_count_dict = {}
         ingredients_count_dict['measure'] = ingredients['measure']
-        ingredients_count_int = int(ingredients['quantity']) * person_count
-        ingredients_count_dict['quantity'] = ingredients_count_int
+        ingredients_count_dict['quantity'] = int(ingredients['quantity']) * person_count
         dict_ingredients_count_dict[ingredients['ingredient_name']] = ingredients_count_dict
     return dict_ingredients_count_dict
 
